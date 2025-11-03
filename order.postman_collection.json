@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "81d29cd9-67ca-4984-bef1-1af0df1b05a9",
+		"name": "order",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26904730"
+	},
+	"item": [
+		{
+			"name": "make_order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":2,\r\n    \"requestId\":\"req-12390\",\r\n    \"items\":[{\"productId\":\"p500\",\"quantity\":\"2\",\"price\":3000} ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_orders",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\":2,\r\n    \"requestId\":\"req-12346\",\r\n    \"items\":[{\"productId\":\"p500\",\"quantity\":\"2\",\"price\":3000},\r\n             {\"productId\":\"p400\",\"quantity\":\"2\",\"price\":3000} ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

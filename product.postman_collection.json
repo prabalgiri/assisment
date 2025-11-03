@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "fd8cc258-7453-496f-9bca-fdcd0d8f0492",
+		"name": "product",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26904730"
+	},
+	"item": [
+		{
+			"name": "save_product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\":\"p400\",\r\n    \"name\":\"Bluetooth Speaker\",\r\n    \"category\":\"Electronics\",\r\n    \"price\":\"1499.00\",\r\n    \"stock\":40,\r\n    \"rating\":4.6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_products_by_filter",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\":\"p400\",\r\n    \"name\":\"Bluetooth Speaker\",\r\n    \"category\":\"Electronics\",\r\n    \"price\":\"1499.00\",\r\n    \"stock\":40,\r\n    \"rating\":4.6\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/products?category=electronics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"products"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "electronics"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_product_by_id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\":\"p400\",\r\n    \"name\":\"Bluetooth Speaker\",\r\n    \"category\":\"Electronics\",\r\n    \"price\":\"1499.00\",\r\n    \"stock\":40,\r\n    \"rating\":4.6\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/products/p500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"products",
+						"p500"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_product",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\":\"p400\",\r\n    \"name\":\"Bluetooth Speaker\",\r\n    \"category\":\"Electronics\",\r\n    \"price\":\"1499.00\",\r\n    \"stock\":40,\r\n    \"rating\":4.6\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/products/p400",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"products",
+						"p400"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_product",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productId\":\"p400\",\r\n    \"name\":\"Bluetooth Speaker\",\r\n    \"category\":\"Electronics\",\r\n    \"price\":\"1499.00\",\r\n    \"stock\":40,\r\n    \"rating\":4.6\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/products/p500",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"products",
+						"p500"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
